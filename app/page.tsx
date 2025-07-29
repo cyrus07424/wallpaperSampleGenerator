@@ -2,6 +2,9 @@
 
 import { useState, useRef, useCallback } from 'react';
 
+// Get the base path for assets (works with GitHub Pages)
+const basePath = process.env.NODE_ENV === 'production' ? '/wallpaperSampleGenerator' : '';
+
 type MockupType = 'iphone' | 'android';
 
 interface AppIcon {
@@ -21,10 +24,10 @@ export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const appIcons: AppIcon[] = [
-    { id: 'app1', src: '/icons/app1.svg', x: 30, y: 100 },
-    { id: 'app2', src: '/icons/app2.svg', x: 110, y: 100 },
-    { id: 'app3', src: '/icons/app3.svg', x: 190, y: 100 },
-    { id: 'app4', src: '/icons/app4.svg', x: 30, y: 180 },
+    { id: 'app1', src: `${basePath}/icons/app1.svg`, x: 30, y: 100 },
+    { id: 'app2', src: `${basePath}/icons/app2.svg`, x: 110, y: 100 },
+    { id: 'app3', src: `${basePath}/icons/app3.svg`, x: 190, y: 100 },
+    { id: 'app4', src: `${basePath}/icons/app4.svg`, x: 30, y: 180 },
   ];
 
   const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
@@ -117,7 +120,7 @@ export default function Home() {
 
           setIsGenerating(false);
         };
-        frameImg.src = `/mockups/${selectedMockup}-frame.svg`;
+        frameImg.src = `${basePath}/mockups/${selectedMockup}-frame.svg`;
       };
       wallpaperImg.src = uploadedImage;
     } catch (error) {
