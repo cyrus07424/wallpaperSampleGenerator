@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="300" height="600" viewBox="0 0 300 600" xmlns="http://www.w3.org/2000/svg">
   <!-- Phone body -->
-  <rect x="0" y="0" width="300" height="600" rx="30" ry="30" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="2"/>
+  <rect x="0" y="0" width="300" height="600" rx="15" ry="15" fill="#1a1a1a" stroke="#000" stroke-width="2"/>
   
   <!-- Screen area -->
-  <rect x="15" y="60" width="270" height="480" rx="20" ry="20" fill="#000000" stroke="#333" stroke-width="1"/>
-  
-  <!-- Notch -->
-  <rect x="100" y="0" width="100" height="25" rx="12" ry="12" fill="#2c2c2c"/>
-  
-  <!-- Home indicator -->
-  <rect x="125" y="565" width="50" height="4" rx="2" ry="2" fill="#666"/>
+  <rect x="10" y="40" width="280" height="520" rx="5" ry="5" fill="none" stroke="#333" stroke-width="1"/>
   
   <!-- Camera -->
-  <circle cx="80" cy="15" r="6" fill="#1a1a1a"/>
-  <circle cx="80" cy="15" r="4" fill="#333"/>
+  <circle cx="150" cy="20" r="8" fill="#333"/>
+  <circle cx="150" cy="20" r="6" fill="#000"/>
   
-  <!-- Speaker -->
-  <rect x="120" y="8" width="60" height="4" rx="2" ry="2" fill="#1a1a1a"/>
+  <!-- Home button -->
+  <circle cx="150" cy="580" r="15" fill="#333" stroke="#555" stroke-width="1"/>
 </svg>
